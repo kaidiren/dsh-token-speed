@@ -1,0 +1,10 @@
+# dsh-token-speed bundle patch
+#
+# 挂载本插件的 host 半边（浏览器半边由 package.json 的 `dsh.client` 声明，
+# 由 dsh-client-modules 自动变成 /plugins 下的 bundle，无需额外接线）。
+#
+# 由 `package.json` 的 `dsh.bundle.patch` 引用；把本包加进 profile 的
+# `dsh.profile.bundles` 后，重启即挂载。
+- insert:
+    - id: dsh-token-speed
+      name: 'dsh-token-speed'
